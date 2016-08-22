@@ -38,3 +38,26 @@ ROOT
  |
  \-- index.toml
 ```
+
+### Node TOML format
+
+Any non-reserved field can be used. The supported types are text, numbers, boolean and array of these. Nesting is currently not supported. The following fields are reserved for meta information:
+
+```
+_name        = "Example Node"                # The name of the node which can be used to represent the node in a graph view
+_description = "A longer description"        # A helpful description
+_connections = [4, 6, 11]                    # The outgoing connections
+_attachments = ["firefox.png", "otters.gif"] # Attached files
+```
+
+### Connection TOML format
+
+Any non-reserved field can be used. The supported types are text, numbers, boolean and array of these. Nesting is currently not supported. The following fields are reserved for meta information:
+
+```
+_name               = "Example Node"                # The name of the connnection which can be used to label the connection in a graph view
+_description        = "A longer description"        # A helpful description
+_source_node        = 11                            # The source node
+_destination_node   = 12                            # The destination node
+_attachments        = ["firefox.png", "otters.gif"] # Attached files
+```
